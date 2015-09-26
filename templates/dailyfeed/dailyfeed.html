@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-10">
+            <h2>Your Daily Feed</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="{% url 'index' %}">Home</a>
+                </li>
+
+                <li class="active">
+                    <strong>Daily Feed</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-lg-2">
+        </div>
+    </div>
+
+    <div class="wrapper wrapper-content  animated fadeInRight blog">
+        <div class="row">
+            <div class="col-lg-6">
+                {% for entry in feed_list %}
+                    {% if forloop.counter|divisibleby:2 %}
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <a href="{{ entry.link }}" class="btn-link">
+                                <h2>
+                                    {{ entry.title }}
+                                </h2>
+                            </a>
+
+                            <div class="small m-b-xs">
+                                <strong>{{ entry.author }}</strong> <span class="text-muted"><i
+                                    class="fa fa-clock-o"></i> {{ entry.date_published }}</span>
+                            </div>
+                            <div>
+                                {{ entry.content |truncatechars_html:300 | safe }}
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Tags:</h5>
+                                    <button class="btn btn-primary btn-xs" type="button">Model</button>
+                                    <button class="btn btn-white btn-xs" type="button">Publishing</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="small text-right">
+                                        <h5>{{ entry.unread }}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="col-lg-6">
+                {% for entry in feed_list %}
+                    {% if not forloop.counter|divisibleby:2 %}
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <a href="{{ entry.link }}" class="btn-link">
+                                <h2>
+                                    {{ entry.title }}
+                                </h2>
+                            </a>
+
+                            <div class="small m-b-xs">
+                                <strong>{{ entry.author }}</strong> <span class="text-muted"><i
+                                    class="fa fa-clock-o"></i> {{ entry.date_published }}</span>
+                            </div>
+                            <div>
+                                {{ entry.content |truncatechars_html:300 | safe }}
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Tags:</h5>
+                                    <button class="btn btn-primary btn-xs" type="button">Model</button>
+                                    <button class="btn btn-white btn-xs" type="button">Publishing</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="small text-right">
+                                        <h5>{{ entry.unread }}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

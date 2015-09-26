@@ -1,0 +1,21 @@
+
+html{margin:0 auto;max-width:33em}
+body{font-family:helvetica,verdana, sans-serif;font-size:18px;padding:.5em 1em 1em 1em}
+h1{font-size:135%;font-weight:bold;text-transform:uppercase;
+letter-spacing:0.16em;padding:.75em 0 0 0;margin: 0 0 .5em 0;text-align:center}
+h2{font-size:115%;font-weight:bold;margin:0 0 .6em 0;text-align:center}
+h3{font-size:95%;font-weight:bold;margin:.5em 0;word-spacing:.3em}
+h4{font-size:95%;font-weight:normal;padding:.025em 0}
+p{font-size:105%;line-height:1.5em;text-align:center}
+a:link{color:#900;text-decoration:none}
+a:visited {color:#900;text-decoration:none}
+figure{display:block;margin:auto;padding:.3em 0 0 0}
+figcaption{font-size:90%}
+th{padding:.7em 0 .3em 0}
+td{padding:.2em 0;}
+ul{margin:.5em 2em;padding:0}
+li{line-height:1.4em;font-size:95%}
+nav{border-bottom: 1px solid #ccc;margin-bottom:1em}
+caption{text-align:left;font-weight:boldth{text-align:left;font-weight:bold}
+table{padding:0}
+td{font-size:95%;line-height:1.5em}

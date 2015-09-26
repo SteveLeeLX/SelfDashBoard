@@ -1,0 +1,75 @@
+<div class="row border-bottom white-bg dashboard-header">
+    <div class="col-sm-3">
+        <h2>Welcome Steve</h2>
+        <small>You have 42 messages and 6 notifications.</small>
+        <ul class="todo-list m-t small-list">
+            <li>
+                <a href="#" class="check-link"><i class="fa fa-check-square"></i> </a>
+                <span class="m-l-xs todo-completed">Buy a milk</span>
+            </li>
+            <li>
+                <a href="#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                <span class="m-l-xs">Go to shop and find some products.</span>
+            </li>
+            <li>
+                <a href="#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                <span class="m-l-xs">Send documents to Mike</span>
+                <small class="label label-primary"><i class="fa fa-clock-o"></i> 1 mins</small>
+            </li>
+            <li>
+                <a href="#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                <span class="m-l-xs">Go to the doctor dr Smith</span>
+            </li>
+            <li>
+                <a href="#" class="check-link"><i class="fa fa-check-square"></i> </a>
+                <span class="m-l-xs todo-completed">Plan vacation</span>
+            </li>
+            <li>
+                <a href="#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                <span class="m-l-xs">Create new stuff</span>
+            </li>
+        </ul>
+    </div>
+    <div class="col-sm-6">
+        <div class="flot-chart dashboard-chart">
+            <div class="flot-chart-content" id="flot-dashboard-chart"></div>
+        </div>
+        <div class="row text-left">
+            <div class="col-xs-4">
+                <div class=" m-l-md">
+                    <span class="h4 font-bold m-t block"><i class="fa fa-dollar" style="color:#b5b8cf"></i> 406</span>
+                    <small class="text-muted m-b block">Expenses</small>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <span class="h4 font-bold m-t block"><i class="fa fa-dollar" style="color:#1ab394"></i> 150</span>
+                <small class="text-muted m-b block">Incomes</small>
+            </div>
+            <div class="col-xs-4">
+                <span class="h4 font-bold m-t block"><i class="fa fa-dollar" style="color:#000"></i> 822</span>
+                <small class="text-muted m-b block">Remaining</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="statistic-box">
+            <h4>
+            Overview
+            </h4>
+            <div class="row text-center">
+                <div class="col-lg-6">
+                    <canvas id="polarChart" width="80" height="80"></canvas>
+                    <h5 >Expenses</h5>
+                </div>
+                <div class="col-lg-6">
+                    <canvas id="doughnutChart" width="78" height="78"></canvas>
+                    <h5 >Incomes</h5>
+                </div>
+            </div>
+            <div class="m-t">
+                <br/>
+                <input type="submit" class="form-control btn btn-primary" value="New Expends">
+            </div>
+        </div>
+    </div>
+</div>
